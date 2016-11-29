@@ -30,8 +30,8 @@ pred = tf.add(pred, b)
 
 # 定义损失函数
 cost = tf.reduce_sum(tf.pow(pred-Y, 2)) / (2 * n_samples)
-# 使用Adam算法，至于为什么不使用一般的梯度下降算法，一会说
 optimizer = tf.train.AdamOptimizer(learning_rate).minimize(cost)
+
 # 初始化所有变量
 init = tf.initialize_all_variables()
 
